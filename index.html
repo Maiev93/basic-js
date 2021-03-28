@@ -1,6 +1,14 @@
-const CustomError = require("../extensions/custom-error");
-
-module.exports =  function repeater(str, options) {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+  function repeater(str, options) {
   let string = [];
   let separator = [];
   if (str == null) {
@@ -39,3 +47,11 @@ module.exports =  function repeater(str, options) {
   return string.join(options.separator);
  
 };
+  console.log(repeater('la', { repeatTimes: 3 }));
+  // console.log(repeater(9.234, { repeatTimes: 4, separator: '||', addition: {a: 5}, additionRepeatTimes: 3, additionSeparator: '&&' }));
+  // console.log(repeater(true, { repeatTimes: 3, separator: '??? ', addition: false, additionRepeatTimes: 2, additionSeparator: '!!!' }));
+  // console.log(repeater('TESTstr', { separator: 'ds', addition: 'ADD!', additionSeparator: ')))000' }));
+   console.log(repeater(null, { repeatTimes: 3, separator: '??? ', addition: null, additionRepeatTimes: 3, additionSeparator: '!!!' }));
+   </script>
+</body>
+</html>
